@@ -1,0 +1,34 @@
+<h3 class="hny-title mb-0 text-center">Products <span>Orders</span></h3>
+
+<table class="table table-striped text-center">
+    <thead>
+    <tr>
+        <th scope="col">Order #</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Customer Email</th>
+        <th scope="col">Customer phone</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Total</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let order of orders">
+        <th class="align-middle" scope="row">
+            {{order.orderId}}
+        </th>
+        <td class="align-middle">{{order.buyerName}}</td>
+        <td class="align-middle">{{order.buyerEmail}}</td>
+        <td class="align-middle">{{order.buyerPhone}}</td>
+        <td class="align-middle">{{order.product}}</td>
+        <td class="align-middle">{{order.orderAmount | currency}}</td>
+        <td class="align-middle">
+            <button routerLink="/admin/add-souscategory" mat-raised-button color="warn"><mat-icon mat-list-icon>done</mat-icon>Finish</button><br><br>
+            <button routerLink="/admin/add-souscategory" mat-raised-button color="warn"><mat-icon mat-list-icon>delete</mat-icon>Cancel</button>
+                
+        </td>
+    </tr>
+    </tbody>
+</table>
+

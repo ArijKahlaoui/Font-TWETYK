@@ -1,0 +1,50 @@
+<mat-card-content class="text-center">
+    <h3 class="hny-title">Add New <span>Sous Category</span></h3>
+    <div class="bootstrap-wrapper">
+        <div class="row">
+            <div class="col-md-9 offset-md-2">
+                <form (ngSubmit)="addScategory()">
+                    <mat-form-field class="w100 " appearance="outline">
+                        <mat-label>Title</mat-label>
+                        <input autofocus type="text" required
+                            name="title" matInput 
+                            [(ngModel)]="ScategoryData.title"
+                            placeholder="Enter here">
+                    </mat-form-field><br/>
+
+                    <mat-form-field class="w100 " appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <textarea rows="20" name="description" required=""
+                        [(ngModel)]="ScategoryData.description"
+                             matInput placeholder="Enter here"></textarea>
+                    </mat-form-field><br>
+                    <mat-form-field appearance="fill" class="w100 ">
+                        <mat-label>Categories</mat-label>
+                        <mat-select  name="category" [(ngModel)]="ScategoryData.category.cid">
+                          <mat-option *ngFor="let c of categories" [value]="c">
+                            {{c.title}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field><br>
+                    <mat-slide-toggle
+                    name="active"
+                                class="example-margin"
+                                [(ngModel)]="ScategoryData.active"
+                                >
+                                Active!
+                    </mat-slide-toggle>
+                              
+                    <mat-card-actions class="text-center">
+                        <button mat-raised-button color="warn">ADD Sous Category</button>
+                        <button mat-raised-button type="reset" color="primary">Reset</button>
+                      </mat-card-actions>
+
+                    
+                    
+                </form>
+            </div> 
+        </div>
+    </div>
+</mat-card-content>
+
+{{ ScategoryData | json}}

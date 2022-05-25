@@ -1,0 +1,63 @@
+<mat-card-content class="text-center">
+    <h3 class="hny-title">Add New <span>Product</span></h3>
+    <div class="bootstrap-wrapper">
+        <div class="row">
+            <div class="col-md-9 offset-md-2">
+                <form (ngSubmit)="formSubmit()">
+                    <mat-form-field class="w100 " appearance="outline">
+                        <mat-label>Product Name</mat-label>
+                        <input autofocus type="text" required
+                            name="title" matInput 
+                            [(ngModel)]="product.name"
+                            placeholder="Enter here">
+                    </mat-form-field><br/>
+
+                    <mat-form-field class="w100 " appearance="outline">
+                        <mat-label>Quantity</mat-label>
+                        <input autofocus type="Number" required
+                            name="title" matInput 
+                            [(ngModel)]="product.stock"
+                            placeholder="Enter here">
+                    </mat-form-field>
+
+                    <mat-form-field class="w100 " appearance="outline">
+                        <mat-label>Price</mat-label>
+                        <input autofocus type="Number" required
+                            name="title" matInput 
+                            [(ngModel)]="product.price"
+                            placeholder="Enter here">
+                    </mat-form-field>
+
+                    <mat-form-field class="w100 " appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <textarea rows="20" name="description" required
+                            [(ngModel)]="product.content"
+                             matInput placeholder="Enter here"></textarea>
+                    </mat-form-field><br>
+                    <mat-form-field class="w100 ">
+                        <mat-label>Category</mat-label>
+                        <mat-select  name="sousCategory" [(ngModel)]="product.sousCategory.sid">
+                            <mat-option *ngFor="let c of sousCategories" [value]="c">
+                                {{c.title}}
+                              </mat-option>
+                        </mat-select>
+                    </mat-form-field><br>
+                    <mat-slide-toggle name="active"
+                                class="example-margin"
+                                [(ngModel)]="product.active"
+                                [checked]="false">
+                                Active!
+                    </mat-slide-toggle>
+                              
+                    <mat-card-actions class="text-center">
+                        <button mat-raised-button color="warn">ADD Product</button>
+                        <button mat-raised-button type="reset" color="primary">Reset</button>
+                      </mat-card-actions>
+
+                    
+                    
+                </form>
+            </div> 
+        </div>
+    </div>
+</mat-card-content>

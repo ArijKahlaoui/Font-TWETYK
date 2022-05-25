@@ -1,0 +1,29 @@
+<mat-card>
+    <section  class="w3l-grids-hny-2 center">
+        <h3 class="hny-title mb-0 text-center">All  <span>Categories</span></h3>
+        <div  class="grids-hny-2-mian py-5">
+            <div class="container py-lg-5">            
+                <div  class="welcome-grids row mt-5 text-center ">
+                    <div *ngFor="let c of categories" class="col-lg-2 col-md-4 col-6 welcome-image">
+                        <div class="boxhny13">
+                                <a href="#URL">
+                                    <img src="assets/images/grid1.jpg" class="img-fluid" alt="" />
+                                    <div class="boxhny-content">
+                                        <h3>{{c.description}}</h3>
+                                    </div>
+                                </a>
+                        </div>
+                        <h4><a>{{c.title}}</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container text-center">
+        <mat-card-actions class="text-center">
+            <button routerLink="/admin/add-category" mat-raised-button color="warn"><mat-icon mat-list-icon>add_circle_outline</mat-icon>Add new Category</button>
+            
+          </mat-card-actions>
+    </div>
+</mat-card>

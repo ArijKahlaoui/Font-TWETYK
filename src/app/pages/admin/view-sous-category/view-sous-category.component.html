@@ -1,0 +1,35 @@
+<mat-card>
+    
+        <section  class="w3l-grids-hny-2">
+            <h3 class="hny-title mb-0 text-center">Sous  <span>Categories</span></h3>
+            <div  class="grids-hny-2-mian py-5">
+                <div class="container py-lg-5">            
+                    <div  class="welcome-grids row mt-5 text-center ">
+                        <div *ngFor="let s of sousCategories" class="col-lg-2 col-md-4 col-6 welcome-image">
+                            <div class="boxhny13">
+                                    <a href="#URL">
+                                        <img src="assets/images/grid6.jpg" class="img-fluid" alt="" />
+                                        <div class="boxhny-content">
+                                            <h3>{{s.description}}</h3>
+                                        </div>
+                                    </a>
+                            </div>
+                            <h2> {{s.category.title}}: {{s.title}}</h2>
+                            <div class="container text-center">
+                                <mat-card-actions class="text-center">
+                                    <button routerLink="/admin/add-category" mat-stroked-button color="warn"><mat-icon>edit</mat-icon>  Update   </button>
+                                    <button routerLink="/admin/add-category" mat-stroked-button color="warn"><mat-icon>delete</mat-icon>Delete</button>
+                                    
+                                    
+                                  </mat-card-actions>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <mat-card-actions class="text-center">
+            <button routerLink="/admin/add-souscategory" mat-raised-button color="warn"><mat-icon mat-list-icon>add</mat-icon>Add Sous Category</button>
+            
+          </mat-card-actions>
+</mat-card>

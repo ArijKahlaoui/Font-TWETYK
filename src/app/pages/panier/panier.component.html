@@ -1,0 +1,53 @@
+<mat-card-content class="text-center">
+    <h3 class="hny-title">My <span>Cart</span></h3>
+<!--Cart Detail Table-->
+<table class="table table-striped text-center">
+    <thead>
+    <tr>
+       
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let productInOrder of productInOrders">
+        
+        <td class="align-middle"><a
+                routerLink="/product/">{{productInOrder.productName}}</a></td>
+        <td class="align-middle">{{productInOrder.productPrice | currency}}</td>
+
+        <td class="align-middle">
+            <a ><i class="fa fa-minus"></i></a>
+            <input min="1" id=""
+                placeholder="{{productInOrder.productQuantity}}"
+                   size="5"
+                   type="number"
+                   required
+                   name='count'>
+            <a > <i class="fa fa-plus"></i></a>
+        </td>
+
+        
+        <td class="align-middle">
+            <button mat-raised-button color="warn" class="btn"><mat-icon mat-list-icon>delete</mat-icon>Remove</button>
+        </td>
+
+    </tr>
+
+    </tbody>
+</table>
+
+<div >
+    <h5 style="display: inline;">Total: 4</h5>
+    <button  class="btn btn-warning float-right">Checkout</button>
+</div>
+<ng-template #empty>
+    <h4 class="text-muted text-center">Cart is empty. Go to get something! :)</h4>
+</ng-template>
+</mat-card-content>
+
+

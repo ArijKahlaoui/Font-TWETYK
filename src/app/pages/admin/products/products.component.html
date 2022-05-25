@@ -1,0 +1,51 @@
+<mat-card-content class="text-center">
+    <h3 class="hny-title">Products <span>List</span></h3>
+
+<table id="table" class="table table-striped text-center" style="width:100%;">
+    <thead>
+    <tr>
+        
+        <th scope="col">Code</th>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+        
+        <td class="align-middle">{{product.productId}}</td>
+        <td class="align-middle">{{product.productName}}</td>
+        <td class="align-middle"><mat-form-field class="w100 ">
+            <mat-label>Category</mat-label>
+            <mat-select  name="category">
+                <div >
+                    <mat-option   >
+                        t-shirt
+                    </mat-option>
+                    <mat-option   >
+                        Women
+                    </mat-option>
+                    
+                </div>
+            </mat-select>
+        </mat-form-field></td>
+        <td class="align-middle">{{product.productDescription}}</td>
+        <td class="align-middle">{{product.productPrice }}</td>
+        <td class="align-middle">{{product.productStock}}</td>
+        <td class="align-middle">{{product.ProductStatus}}</td>
+        <td class="align-middle">
+            <mat-card-actions class="text-center">
+                <button mat-raised-button color="warn">Edit</button>
+                <button mat-raised-button type="reset" color="primary">Remove</button>
+              </mat-card-actions>
+        </td>
+
+    </tbody>
+</table>
+
+</mat-card-content>

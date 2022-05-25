@@ -1,0 +1,76 @@
+<section class="w3l-subscription-6">
+	<!--/customers -->
+	<div class="subscription-infhny">
+		<div class="container-fluid">
+
+			<div class="subscription-grids row">
+
+				<div class="subscription-right form-right-inf col-lg-6 p-md-5 p-4 text-center">
+					<div class="p-lg-5 py-md-0 py-3">
+						<h3 class="hny-title">Join <span>US</span></h3>
+						<!--{{ user | json }} -->
+                        <form (ngSubmit)="formSubmit()"  method="post" class="signin-form mt-lg-5 ">
+							<div class="forms-gds">
+								<div class="form-input">
+									<mat-form-field class="full-width" appearance="outline">
+                                        <mat-label>UserName</mat-label>
+                                        <input [(ngModel)]="user.username"  type="text"
+                                            name="username" required
+                                            matInput placeholder="Enter here">
+                                    </mat-form-field>
+                              
+                                    <mat-form-field class="full-width" appearance="outline">
+                                        <mat-label>password</mat-label>
+                                        <input [(ngModel)]="user.password" required
+                                        name="password"
+                                        type="password" matInput placeholder="Enter here">
+                                    </mat-form-field>
+                                    
+                                    
+                                    <mat-form-field class="full-width" appearance="outline">
+                                        <mat-label>FirstName</mat-label>
+                                        <input [(ngModel)]="user.firstName" 
+                                        name="firstName" required
+                                        matInput placeholder="Enter here">
+                                    </mat-form-field>
+
+                                    <mat-form-field class="full-width" appearance="outline">
+                                        <mat-label>LastName</mat-label>
+                                        <input required [(ngModel)]="user.lastName" 
+                                        name="lastName"
+                                        matInput placeholder="Enter here">
+                                    </mat-form-field>
+                                        
+                                    <mat-form-field class="full-width" appearance="outline">
+                                        <mat-label>Email</mat-label>
+                                        <input [(ngModel)]="user.email" 
+                                        name="email" required
+                                        matInput placeholder="Enter here">
+                                    </mat-form-field>
+                                      
+                                    <mat-form-field class="full-width" appearance="outline">
+                                        <mat-label>Phone</mat-label>
+                                        <input [(ngModel)]="user.phone" 
+                                        name="phone" required
+                                        type="number" matInput placeholder="Enter here">
+                                    </mat-form-field>
+                                    
+                                </div>
+                                
+								
+							</div>
+                            <div class="forms-gds">
+                                <button mat-raised-button type="submit" class="btn">Register</button>
+                            </div>
+						</form>
+					</div>
+				</div>
+				<div class="subscription-left forms-25-info col-lg-6 ">
+
+				</div>
+			</div>
+
+			<!--//customers -->
+		</div>
+    </div>
+</section>

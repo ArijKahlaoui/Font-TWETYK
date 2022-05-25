@@ -1,0 +1,54 @@
+<mat-toolbar >
+    <a routerLink="/"
+       mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+     <mat-icon>home</mat-icon>
+    </a>
+   <h3><span>TweTyk</span></h3>
+   <span class="example-spacer"></span>
+
+
+   <a 
+   style="margin-right: 60px;"
+   
+    [routerLink]="'/product'"
+     mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+     <mat-icon mat-list-icon>shopping_cart</mat-icon> Products
+   </a>
+
+
+
+   <a  
+   *ngIf="!isLoggedIn"
+   style="margin-right: 60px;"
+      [routerLink]="'/login'"
+      mat-icon-button class="example-icon favorite-icon " aria-label="Example icon-button with heart icon">
+      <mat-icon mat-list-icon>login</mat-icon>login
+   </a>
+ 
+   <a 
+   
+   *ngIf="!isLoggedIn" 
+    [routerLink]="'/signup'" style="margin-right: 30px;"
+     mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+     <mat-icon mat-list-icon>receipt</mat-icon>Register
+      
+      
+   </a>
+
+ 
+   <button *ngIf="isLoggedIn" mat-button [matMenuTriggerFor]="menu">{{ login.getUser().username }}</button>
+   
+    <mat-menu  #menu="matMenu" >
+        
+        <button  [routerLink]="'/admin/profile'"mat-menu-item>
+          <mat-icon mat-list-icon>account_circle</mat-icon>Profil
+        </button>
+        
+        <button (click)="logout()"
+          
+          
+          mat-menu-item><mat-icon mat-list-icon>logout</mat-icon>Logout</button>
+        
+      </mat-menu>
+    
+ </mat-toolbar>

@@ -1,0 +1,55 @@
+<mat-card *ngIf="user">
+    <h1>Your Profile Details</h1>
+    
+    <mat-card-content>
+      <div class="bootstrap-wrapper">
+          <div class="container text-center ">
+            
+
+              <div class="container text-center">
+                <img src="https://www.bing.com/th?id=OIP.eyhIau9Wqaz8_VhUIomLWgHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.38&pid=3.1&rm=2"
+                alt="" class="profile-image responsive-image">
+              </div>
+
+              <h1 class="mt20">{{user.firstName}} {{user.lastName}}</h1>
+
+              <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <table class="table text-center">
+                        <tr >
+                            <td>Username</td>
+                            <td>{{user.username}}</td>
+                        </tr>
+                        <tr>
+                            <td>FirstName</td>
+                            <td>{{user.firstName}}</td>
+                        </tr>
+                        <tr>
+                            <td>LastName</td>
+                            <td>{{user.lastName}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>{{user.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>{{user.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>{{user.enabled?'ACTIVE':'NOTACTIVE'}}</td>
+                        </tr>
+                    </table>
+                </div>
+              </div>
+
+
+          </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+      <button mat-raised-button color="warn">EDIT</button>
+      <button mat-raised-button color="primary">Disactive</button>
+    </mat-card-actions>
+</mat-card>
