@@ -28,10 +28,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### To install the project using Git Bash:
 
 Clone the repository:
-  git clone https://github.com/ArijKahlaoui/Font-TWETYK.git
+ ` git clone https://github.com/ArijKahlaoui/Font-TWETYK.git `
 Navigate to the frontend directory and install dependencies:
-  cd Font-TWETYK
-  npm install
+  `cd Font-TWETYK`
+ ` npm install`
 
 ## Demo 
 
