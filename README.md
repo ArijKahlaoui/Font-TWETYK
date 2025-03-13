@@ -19,11 +19,11 @@
 ### 1️⃣ Clone the repository  
 ```bash
 git clone https://github.com/ArijKahlaoui/Font-TWETYK.git
-
+```bash
 ### 2️⃣ Navigate to the frontend directory
  ```bash
 cd Font-TWETYK
-
+```bash
 ### 3️⃣ Install dependencies
 ```bash
 npm install
