@@ -18,7 +18,7 @@
 
 ### 1️⃣ Clone the repository  
 ```
-git clone https://github.com/ArijKahlaoui/Font-TWETYK.git
+git clone [https://github.com/ArijKahlaoui/Font-TWETYK.git](https://github.com/ArijKahlaoui/BackEnd-TWETYK.git)
 ```
 ### 2️⃣ Navigate to the frontend directory
 ```
