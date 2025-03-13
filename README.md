@@ -32,7 +32,7 @@ npm install
 ```
 npm start
 ```
-##🔧 Backend Setup
+## 🔧 Backend Setup
 If you want to run the backend:
 ### 1️⃣ Clone the backend repository
 ```
