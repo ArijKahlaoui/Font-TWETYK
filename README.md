@@ -18,7 +18,7 @@
 
 ### 1️⃣ Clone the repository  
 ```
-git clone [https://github.com/ArijKahlaoui/Font-TWETYK.git](https://github.com/ArijKahlaoui/BackEnd-TWETYK.git)
+git clone [https://github.com/ArijKahlaoui/Font-TWETYK.git]
 ```
 ### 2️⃣ Navigate to the frontend directory
 ```
@@ -36,7 +36,7 @@ npm start
 If you want to run the backend:
 ### 1️⃣ Clone the backend repository
 ```
-git clone https://github.com/ArijKahlaoui/Back-TWETYK.git
+git clone [https://github.com/ArijKahlaoui/BackEnd-TWETYK.git]
 ```
 ### 2️⃣ Navigate to the backend directory
 ### 3️⃣ Configure the database
